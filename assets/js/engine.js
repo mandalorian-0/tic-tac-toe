@@ -12,7 +12,7 @@ export function createGameEngine() {
   }
 
   function checkWinner() {
-    const winnigCombos = [
+    const winningCombos = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -23,7 +23,7 @@ export function createGameEngine() {
       [2, 4, 6],
     ];
 
-    for (let combo in winnigCombos) {
+    for (const combo of winningCombos) {
       const [a, b, c] = combo;
 
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
@@ -50,7 +50,7 @@ export function createGameEngine() {
 
     const result = checkWinner();
 
-    if (result === "X" || result === "O") {
+    if (result && (result === "X" || result === "O")) {
       winner = result;
       gameOver = true;
     } else if (isDraw()) {
@@ -85,3 +85,16 @@ export function createGameEngine() {
     isGameOver,
   });
 }
+
+// const game = createGameEngine();
+
+// game.startGame();
+
+// game.makeMove(0);
+// game.makeMove(4);
+// game.makeMove(1);
+// game.makeMove(3);
+// game.makeMove(2);
+
+// console.log(game.getBoard());
+// console.log(game.isGameOver());
