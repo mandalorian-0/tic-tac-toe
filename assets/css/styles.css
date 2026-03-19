@@ -1,0 +1,142 @@
+/* Game Container */
+.game-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.game-container h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Turn Indicator */
+#turn {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2980b9;
+  min-height: 24px;
+}
+
+/* Winner Message */
+#winner {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  min-height: 24px;
+  font-family: 'Courier New', monospace;
+}
+
+/* Board */
+.board {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 2rem auto;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border: 3px solid #3498db;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cell styling */
+.cell {
+  background-color: #f0f4f8;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  min-height: 80px;
+  min-width: 80px;
+}
+
+/* Hover effect */
+.cell:hover {
+  background-color: #e0f7fa;
+  transform: scale(1.02);
+  border-color: #2980b9;
+}
+
+/* Cell with X or O */
+.cell[data-index="0"] {
+  grid-column: 1;
+  grid-row: 1;
+}
+.cell[data-index="1"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.cell[data-index="2"] {
+  grid-column: 3;
+  grid-row: 1;
+}
+.cell[data-index="3"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+.cell[data-index="4"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+.cell[data-index="5"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+.cell[data-index="6"] {
+  grid-column: 1;
+  grid-row: 3;
+}
+.cell[data-index="7"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+.cell[data-index="8"] {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* New Game Button */
+#new-game {
+  margin-top: 1.5rem;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
+}
+
+#new-game:hover {
+  background-color: #1a6c9f;
+  transform: scale(1.02);
+}
+
+/* Hidden classes (for winner or turn) */
+.hidden {
+  display: none;
+}
