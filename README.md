@@ -89,9 +89,3 @@ This project demonstrates how to separate **game logic** from **user interface**
 ## 📝 License
 
 This project is licensed under the **MIT License** — feel free to use, modify, and distribute it for any purpose.
-
----
-
-## 🙌 Thanks
-
-Built with pure JavaScript to show how **simple, modular, and powerful** game logic can be — without frameworks or complexity.
